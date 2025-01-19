@@ -170,7 +170,5 @@ The project successfully built a time series forecasting model to predict taxi d
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
-
 ## Contact
 For any questions or feedback, please contact hala.francis@gmail.com

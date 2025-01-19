@@ -1,16 +1,30 @@
 # Sweet Lift Taxi - Time Series Forecasting
 
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Dataset Description](#dataset-description)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
+- [Data Preprocessing for Modeling](#data-preprocessing-for-modeling)
+- [Model Training and Evaluation](#model-training-and-evaluation)
+- [Conclusions and Next Steps](#conclusions-and-next-steps)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
 ## Project Overview
 
 Sweet Lift Taxi company has collected historical data on taxi orders at airports. The goal of this project is to develop a model that predicts the number of taxi orders for the next hour, helping the company attract more drivers during peak hours. 
 
-The key requirement for this model is that the **Root Mean Square Error (RMSE) on the test set should not exceed 48**.
+The key requirement for this model is that the **Root Mean Square Error (RMSE) on the test set does not exceed 48**.
 
 This project involves:
 - **Exploratory Data Analysis (EDA)** to understand trends, seasonality, and potential class imbalance.
 - **Data Preprocessing** to handle missing values, outliers, and feature engineering.
 - **Time Series Modeling** using different approaches.
 - **Model Evaluation** to ensure optimal performance.
+
+---
 
 ## Dataset Description
 
@@ -38,6 +52,8 @@ The dataset consists of historical records of taxi orders at airports. Each row 
 
 5. **Train-Test Split**:
    - Split the dataset into **training** and **test** sets while maintaining the time sequence.
+
+---
 
 ## Exploratory Data Analysis (EDA)
 
@@ -71,6 +87,8 @@ Before building predictive models, an **Exploratory Data Analysis (EDA)** was co
 
 These insights guided the feature engineering process and model selection.
 
+---
+
 ## Data Preprocessing for Modeling
 
 To prepare the dataset for training predictive models, several preprocessing steps were applied:
@@ -97,6 +115,8 @@ To prepare the dataset for training predictive models, several preprocessing ste
 - Differencing techniques were used to transform the data if non-stationarity was detected.
 
 The processed dataset was then used to train different models for forecasting taxi demand.
+
+---
 
 ## Model Training and Evaluation
 
@@ -130,27 +150,27 @@ Each model was evaluated based on:
 - **XGBoost and LSTM models achieved the best RMSE scores**, meeting the project’s requirement of **RMSE ≤ 48**.
 - **Feature Importance Analysis** showed that recent hourly orders and rolling averages had the highest predictive power.
 
-These results suggest that **boosted trees and deep learning approaches** are most effective for this forecasting task.
+---
 
 ## Conclusions and Next Steps
 
 ### Key Takeaways:
-- **Time Series Patterns Matter**: The taxi order data exhibited strong seasonal and temporal patterns, making feature engineering crucial.
 - **Boosted Trees and LSTMs Performed Best**: Models like **XGBoost** and **LSTM** achieved an RMSE below 48, meeting the project’s requirements.
 - **Feature Engineering Was Critical**: Lag variables, rolling statistics, and Fourier transformations significantly improved predictive accuracy.
-- **Traditional Models Struggled**: Linear regression failed to capture non-linear dependencies, leading to higher RMSE.
-
-### Challenges Encountered:
-- **Data Sparsity in Off-Peak Hours**: Some time periods had very low taxi demand, making predictions harder.
-- **Computational Costs**: Training deep learning models like LSTM was more resource-intensive compared to tree-based models.
-- **Handling Non-Stationarity**: Differencing and transformations were necessary to make time series models perform effectively.
 
 ### Future Improvements:
 1. **Incorporate External Data**: Weather conditions, flight schedules, and local events could enhance the model’s accuracy.
-2. **Use More Advanced Time Series Models**: Exploring models like **Prophet**, **ARIMA**, or **Transformers** for time series forecasting.
+2. **Use More Advanced Time Series Models**: Exploring models like **Prophet**, **ARIMA**, or **Transformers**.
 3. **Deploy the Model**: Implement a real-time forecasting system with automated retraining.
-4. **Optimize for Speed**: Fine-tune hyperparameters to reduce inference time for real-world applications.
 
 The project successfully built a time series forecasting model to predict taxi demand, providing valuable insights for optimizing driver availability at airports.
 
+---
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Contact
+For any questions or feedback, please contact hala.francis@gmail.com

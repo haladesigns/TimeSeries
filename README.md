@@ -85,7 +85,12 @@ Before building predictive models, an **Exploratory Data Analysis (EDA)** was co
 - **Box Plots**: Help detect outliers in the number of orders across different time periods.
 - **Autocorrelation Plots**: Indicate that past values significantly influence future orders.
 
+![Trend Seasonality Residuals](https://github.com/user-attachments/assets/bef1285b-d005-4a86-a993-96a131ec30aa)
+
+![Hourly Taxi Orders with 24-Hour Rolling Mean](https://github.com/user-attachments/assets/01b5d38c-7f4b-46b1-ac93-7e8d4efa258d)
+
 These insights guided the feature engineering process and model selection.
+
 
 ---
 
@@ -149,6 +154,10 @@ Each model was evaluated based on:
 
 - **XGBoost and LSTM models achieved the best RMSE scores**, meeting the project’s requirement of **RMSE ≤ 48**.
 - **Feature Importance Analysis** showed that recent hourly orders and rolling averages had the highest predictive power.
+
+![XGBoost_Predicted vs Actual](https://github.com/user-attachments/assets/ee89716f-c1cc-4320-aba3-3985135177db)
+
+![Residuals Analysis - XGBoost](https://github.com/user-attachments/assets/53c9a3f5-5a00-4f3c-ad4f-0e3a91a2b3c1)
 
 ---
 
